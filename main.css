@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --mainTextColor-light:#000;
+    --secondaryTextColor-light:rgb(51 51 51);
+    --mainLinkColor-light:#0da2b8;
+    --mainBorderColor-light:rgb(218, 218, 218);
+    --mainBgColor-light:rgb(249, 250,251);
+
+    --mainTextColor-dark:#fff;
+    --secondaryTextColor-dark:#adb0b1;
+    --mainLinkColor-dark:rgb(255, 16, 189);
+    --mainBorderColor-dark:#2b3031;
+    --mainBgColor-dark:#131415;
+    
+    --mainTextColor:var(--mainTextColor-dark);
+    --secondaryTextColor:var(--secondaryTextColor-dark);
+    --mainLinkColor:var(--mainLinkColor-dark);
+    --mainBorderColor:var(--mainBorderColor-dark);
+    --mainBgColor:var(--mainBgColor-dark);
+
+}
+
+
+*{
+    font-family: 'Readex Pro';
+    line-height: 1em;
+    box-sizing: border-box;
+    color: var(--mainTextColor);  
+}
+
+body{
+    background-color: var(--mainBgColor);            
+}
+
+p, li{
+    color: var(--secondaryTextColor);
+    font-size: 1em;
+}
+
+h2{
+    font-size: 1.25em;
+}
+
+a{
+    text-decoration: none;
+    /*color: var(--mainLinkColor);*/
+    font-weight: 500;
+    animation: background-pan 1.5s linear infinite;
+    background: linear-gradient(
+        to right,
+        rgb(255, 16, 189),
+        rgb(152, 33, 255),
+        rgb(255, 16, 54),
+        rgb(255, 16, 189)
+        );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+li{
+    line-height: 1.9em;
+}
+
+#container--main{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.section--page{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#wrapper--hero{
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+/*a{
+    font-weight: 300;
+}*/
+
+#user-name{
+    font-size: 1.8em;
+    line-height: 1em;
+}
+
+#profile-pic{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.contact{
+    color: var(--mainTextColor);
+}
+
+.contact2{
+     font-weight: 300;
+}
+
+.card--general{
+    border-left: 1px solid var(--mainBorderColor);
+    border-right: 1px solid var(--mainBorderColor);
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.card--skills{
+    border-left: 1px solid var(--mainBorderColor);
+    border-right: 1px solid var(--mainBorderColor);
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.line-break{
+    background-color: var(--mainBorderColor);
+    height: 1px;
+}
+
+.row{
+  display: flex;
+}
+
+.column{
+  flex: 50%;
+}
+
+strong{
+  animation: background-pan 1.5s linear infinite;
+  background: linear-gradient(
+    to right,
+    rgb(88, 44, 255),
+    rgb(168, 30, 255),
+    rgb(39, 112, 255),
+    rgb(88, 44, 255)
+    );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+.date{
+  color: rgb(92, 92, 93);
+  font-weight: bold;
+}
+
+.org{
+  font-weight: bold;
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  
+  to {
+    background-position: -200% center;
+  }
+}
+
+@media(max-width:600px){
+
+    #container--main{
+        text-align: center;
+    }
+
+    .section--page{
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    #wrapper--hero{
+        display: flex;
+        align-items: center; 
+        flex-direction: column;
+    }
+
+    #profile-pic{
+        width: 200px;
+        height: 200px;
+    }
+
+    .card--general{
+        border-left: none;
+        border-right: none;
+        padding-left: 0;
+        padding-right: 0;
+
+    }
+
+    .card--skills{
+        border-left: none;
+        border-right: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .column{
+        padding-left: 0;
+    }
+
+    #user-name{
+    font-size: 1.5em;
+    }   
+
+    p, li{
+        font-size: 0.9em;
+    }
+
+    ul{
+        text-align: left;
+    }
+
+    h2{
+        font-size: 1.1em;
+    }
+
+}
