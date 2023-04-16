@@ -42,7 +42,7 @@ h2{
     font-size: 1.25em;
 }
 
-a{
+a {
     text-decoration: none;
     /*color: var(--mainLinkColor);*/
     font-weight: 500;
@@ -57,7 +57,7 @@ a{
     background-size: 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    white-space: nowrap;
+    white-space: nowrap;   
 }
 
 li{
@@ -95,6 +95,11 @@ li{
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
+    transition: transform 1s;
+}
+
+#profile-pic:hover {
+    transform: scale(1.5);
 }
 
 .contact{
